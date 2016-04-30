@@ -90,8 +90,8 @@ start5([2/2,2/3,1/2,3/3,1/3,2/1,3/2,1/1,3/1]).   %  18 moves
 
 h([_Empty|Tiles], H) :-
     goal([_Empty1|GoalPositions]),
-    % totdist(Tiles, GoalPositions, D),  % Total dist from home positions
-    misplaced(Tiles, GoalPositions, D),  % Total tiles not in home positions
+    totdist(Tiles, GoalPositions, D),  % Total dist from home positions
+    % misplaced(Tiles, GoalPositions, D),  % Total tiles not in home positions
     H is D.
 
 totdist([], [], 0).
